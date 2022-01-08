@@ -30,11 +30,11 @@ public class HomeTree {
 
     @Test
     void testDragAndDrop() {
-        //Откройте https://the-internet.herokuapp.com/drag_and_drop
+        //Открыть https://the-internet.herokuapp.com/drag_and_drop
         open("https://the-internet.herokuapp.com/drag_and_drop");
         //перенести прямоугольник А на место В
         $("#column-a").dragAndDropTo($("#column-b"));
-        //проверить, что прямоугольники действительно поменялись
+        //прямоугольники действительно поменялись
         $("#column-a").shouldHave(text("b"));
         $("#column-b").shouldHave(text("a"));
     }
